@@ -6,4 +6,4 @@
 !/ProjectSettings/
 
 # Include required folder from unity assets
-# !/Assets/Scene/
+!/[Aa]ssets/[Ss]cene/
