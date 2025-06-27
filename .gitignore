@@ -7,7 +7,8 @@
 # Un-ignore core Unity project folders
 !/Assets/
 !/ProjectSettings/
-!/[Aa]ssets*
+!/[Aa]ssets/
 
-# Unignore Unity's Package Manager files (crucial for packages)
-!/Packages/
+# Un-ignore Unity's Package Manager files
+!/[Pp]ackages/*
+!/[Pp]rojectSettings/*
