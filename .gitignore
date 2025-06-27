@@ -1,9 +1,12 @@
-# Ignore everything
+# Ignore everything by default
 *
 
-# But un-ignore the .gitignore file itself
+# Un-ignore the .gitignore file itself
 !.gitignore
+
+# Un-ignore core Unity project folders
+!/Assets/
 !/ProjectSettings/
 
-# Include required folder from unity assets
-!/[Aa]ssets/[Ss]cene/
+# Unignore Unity's Package Manager files (crucial for packages)
+!/Packages/
