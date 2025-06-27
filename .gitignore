@@ -23,11 +23,16 @@
 !/Assets
 
 # Un-ignore Scene Folder
-!/Assets/Scene
-!/Assets/Scene.meta
-!/Assets/Scene/**
+!/Assets/Scenes
+!/Assets/Scenes.meta
+!/Assets/Scenes/**
 
 # Un-ignore Script Folder
 !/Assets/Script
 !/Assets/Script.meta
 !/Assets/Script/**
+
+# Un-ignore zOther Folder
+!/Assets/zOther
+!/Assets/zOther.meta
+!/Assets/zOther/**
