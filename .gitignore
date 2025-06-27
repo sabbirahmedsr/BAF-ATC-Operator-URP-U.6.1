@@ -1,11 +1,15 @@
 # Ignore everything by default
 *
-
-# Un-ignore the .gitignore file itself
+# Un-ignore the .gitignore & README
 !.gitignore
+!README.md
+
+
 
 # Ignore Big file by default
 *.psd
+
+
 
 # Un-ignore Unity default setting files [Basic]
 !/Packages/
@@ -22,7 +26,6 @@
 !/Assets/Scene
 !/Assets/Scene.meta
 !/Assets/Scene/**
-
 
 # Un-ignore Script Folder
 !/Assets/Script
