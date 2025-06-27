@@ -22,6 +22,11 @@
 # Un-ignore project folders
 !/Assets
 
+# Un-ignore Info Folder
+!/Assets/Info
+!/Assets/Info.meta
+!/Assets/Info/**
+
 # Un-ignore Scene Folder
 !/Assets/Scenes
 !/Assets/Scenes.meta
