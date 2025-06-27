@@ -4,11 +4,27 @@
 # Un-ignore the .gitignore file itself
 !.gitignore
 
-# Un-ignore core Unity project folders
-!/Assets/
-!/ProjectSettings/
-!/[Aa]ssets/
+# Ignore Big file by default
+*.psd
 
-# Un-ignore Unity's Package Manager files
-!/[Pp]ackages/*
-!/[Pp]rojectSettings/*
+# Un-ignore Unity default setting files [Basic]
+!/Packages/
+!/Packages/*
+!/ProjectSettings/
+!/ProjectSettings/*
+
+
+
+# Un-ignore project folders
+!/Assets
+
+# Un-ignore Scene Folder
+!/Assets/Scene
+!/Assets/Scene.meta
+!/Assets/Scene/**
+
+
+# Un-ignore Script Folder
+!/Assets/Script
+!/Assets/Script.meta
+!/Assets/Script/**
