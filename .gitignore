@@ -1,5 +1,9 @@
 # Ignore everything
 *
 
-# But unignore the .gitignore file itself
+# But un-ignore the .gitignore file itself
 !.gitignore
+!/ProjectSettings/
+
+# Include required folder from unity assets
+# !/Assets/Scene/
