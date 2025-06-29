@@ -6,10 +6,7 @@
 
 
 
-# Ignore this file formate by default
-*.psd
-*.blend1
-*.blend1.meta
+
 
 
 
@@ -63,3 +60,9 @@
 !/Assets/zOther
 !/Assets/zOther.meta
 !/Assets/zOther/**
+
+
+# Ignore this file formate by default
+*.psd
+*.blend1
+*.blend1.meta
