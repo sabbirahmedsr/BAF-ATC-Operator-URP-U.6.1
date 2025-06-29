@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05ff3b825ae5bc549b73150c49b04ac0, type: 3}
+  m_Name: DepartureCommandData
+  m_EditorClassIdentifier: Assembly-CSharp::DepartureFlightCommandData
+  allDepartureCommand:
+  - commandName: Request Airfield Info
+    commandID: 2
+    allParameterID: 
+  - commandName: Give Airfield Info
+    commandID: 3
+    allParameterID: 
+  - commandName: Request Departure Clearance
+    commandID: 4
+    allParameterID: 
+  - commandName: Give Departure Clearance
+    commandID: 5
+    allParameterID: 
+  - commandName: Request Startup
+    commandID: 6
+    allParameterID: 
+  - commandName: Approve Startup
+    commandID: 7
+    allParameterID: 03
+  - commandName: Request Pushback
+    commandID: 8
+    allParameterID: 
+  - commandName: Approve Pushback
+    commandID: 9
+    allParameterID: 0300
+  - commandName: Request StartPush
+    commandID: 10
+    allParameterID: 
+  - commandName: Approve StartPush
+    commandID: 11
+    allParameterID: 0300
+  - commandName: Request Taxi
+    commandID: 12
+    allParameterID: 
+  - commandName: Approve Taxi
+    commandID: 13
+    allParameterID: 0401
+  - commandName: Approve M.Taxi
+    commandID: 14
+    allParameterID: 04
+  - commandName: Give ATC Clerance
+    commandID: 15
+    allParameterID: 
+  - commandName: Request Line Up
+    commandID: 16
+    allParameterID: 
+  - commandName: Approve Line Up
+    commandID: 17
+    allParameterID: 
+  - commandName: Confirm Departure
+    commandID: 18
+    allParameterID: 
+  - commandName: Approve Airborne
+    commandID: 19
+    allParameterID: 
+  - commandName: Approve Transfer
+    commandID: 20
+    allParameterID: 
+  - commandName: Approve CCT
+    commandID: 21
+    allParameterID: 
+  - commandName: Freeze Aircraft
+    commandID: 101
+    allParameterID: 
+  - commandName: Resume Aircraft
+    commandID: 102
+    allParameterID: 
+  - commandName: Destroy
+    commandID: 250
+    allParameterID: 

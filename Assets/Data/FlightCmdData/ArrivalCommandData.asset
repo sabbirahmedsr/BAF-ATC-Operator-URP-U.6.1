@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 005f05b689236d24aa90e3ac2aea139b, type: 3}
+  m_Name: ArrivalCommandData
+  m_EditorClassIdentifier: 
+  allArrivalCommand:
+  - commandName: Approve Inbound
+    commandID: 2
+    allParameterID: 06000501
+  - commandName: Approve Outbound
+    commandID: 3
+    allParameterID: 00
+  - commandName: Approve 12 DME Arc
+    commandID: 4
+    allParameterID: 
+  - commandName: Approve R300
+    commandID: 5
+    allParameterID: 
+  - commandName: Approve R355
+    commandID: 6
+    allParameterID: 
+  - commandName: Approve Localizer
+    commandID: 7
+    allParameterID: 
+  - commandName: Approve 6DME
+    commandID: 8
+    allParameterID: 
+  - commandName: Approve Landing
+    commandID: 9
+    allParameterID: 
+  - commandName: Land Rwy Vacate
+    commandID: 10
+    allParameterID: 02
+  - commandName: Taxi To Park
+    commandID: 11
+    allParameterID: 0304
+  - commandName: Taxi to Termarc
+    commandID: 12
+    allParameterID: 
+  - commandName: Approve 3Mile
+    commandID: 13
+    allParameterID: 
+  - commandName: Approve Transfer
+    commandID: 14
+    allParameterID: 
+  - commandName: Approve CCT
+    commandID: 15
+    allParameterID: 
+  - commandName: Change Flight Level
+    commandID: 100
+    allParameterID: 00
+  - commandName: Freeze Aircraft
+    commandID: 101
+    allParameterID: 
+  - commandName: Resume Aircraft
+    commandID: 102
+    allParameterID: 
+  - commandName: Destroy
+    commandID: 250
+    allParameterID: 

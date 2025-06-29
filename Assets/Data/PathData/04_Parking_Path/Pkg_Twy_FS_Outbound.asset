@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9745e89412c4564a9554f60a2861bad, type: 3}
+  m_Name: Pkg_Twy_FS_Outbound
+  m_EditorClassIdentifier: 
+  pathSequences:
+    allPath:
+    - pathType: 1
+      p0: {x: -128.61, y: 0, z: 303.68}
+      p1: {x: -129.72273, y: 0, z: 305.21155}
+      p2: {x: -131.53432, y: 0, z: 306.138}
+      p3: {x: -133.72, y: 0, z: 304.55002}
+      dist: 5.891544
+      distFraction: 0.16973479
+      fwd_p0: {x: -0.5877825, y: 0, z: 0.809019}
+      fwd_p3: {x: -0.8090188, y: 0, z: -0.58778274}
+      fwd_linear: {x: -0.98581356, y: 0, z: 0.16784403}
+      totalAngle: 1.7996963
+      drawResolution: 11
+    - pathType: 1
+      p0: {x: -133.72, y: 0, z: 304.55002}
+      p1: {x: -135.6154, y: 0, z: 303.17294}
+      p2: {x: -141.543, y: 0, z: 298.9077}
+      p3: {x: -142.93, y: 0, z: 297.9}
+      dist: 11.359879
+      distFraction: 0.08802911
+      fwd_p0: {x: -0.80901986, y: 0, z: -0.58778125}
+      fwd_p3: {x: -0.8090139, y: 0, z: -0.58778954}
+      fwd_linear: {x: -0.81074756, y: 0, z: -0.5853959}
+      totalAngle: 0
+      drawResolution: 2
+    - pathType: 1
+      p0: {x: -142.93, y: 0, z: 297.9}
+      p1: {x: -144.12326, y: 0, z: 297.03302}
+      p2: {x: -147.5338, y: 0, z: 296.69553}
+      p3: {x: -149.15, y: 0, z: 298.92}
+      dist: 6.8664765
+      distFraction: 0.1456351
+      fwd_p0: {x: -0.8090125, y: 0, z: -0.5877915}
+      fwd_p3: {x: -0.58778787, y: 0, z: 0.8090151}
+      fwd_linear: {x: -0.98681885, y: 0, z: 0.16182867}
+      totalAngle: 1.7997099
+      drawResolution: 11
+    allDistFraction:
+    - 0.24428098
+    - 0.47101444
+    - 0.28470457
+    totalDistance: 24.117899

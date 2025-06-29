@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9745e89412c4564a9554f60a2861bad, type: 3}
+  m_Name: Pkg_Twy_MS
+  m_EditorClassIdentifier: 
+  pathSequences:
+    allPath:
+    - pathType: 1
+      p0: {x: -112.17, y: 0, z: 275.2}
+      p1: {x: -113.0492, y: 0, z: 276.41013}
+      p2: {x: -113.76531, y: 0, z: 283.12396}
+      p3: {x: -114.38, y: 0, z: 283.97}
+      dist: 9.077001
+      distFraction: 0.110168554
+      fwd_p0: {x: -0.5877874, y: 0, z: 0.80901545}
+      fwd_p3: {x: -0.58778644, y: 0, z: 0.80901617}
+      fwd_linear: {x: -0.24435651, y: 0, z: 0.96968544}
+      totalAngle: 0.9945008
+      drawResolution: 7
+    allDistFraction:
+    - 1
+    totalDistance: 9.077001

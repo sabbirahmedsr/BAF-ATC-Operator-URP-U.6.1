@@ -1,0 +1,366 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd25176d26d5e574a997da60b10f7356, type: 3}
+  m_Name: AP_Data_BG602
+  m_EditorClassIdentifier: 
+  airplanePrefab: {fileID: 2696278577592986930, guid: 432eef09f63b74648b0a279686fe749e, type: 3}
+  callSign: 8
+  aircraftType: 2
+  parkingPathData: {fileID: 11400000, guid: bfa35a1746341ea4cb807c0a960f1f38, type: 2}
+  arrTaxiwayData: {fileID: 11400000, guid: 75198e0d5652aca479d9d7982721f712, type: 2}
+  eatHoldingPath: {fileID: 11400000, guid: b7b9ddbc79c4c6642b0a83abc8989e7a, type: 2}
+  allPreArrivalPoints:
+  - NIKLI
+  - LATIM
+  - 20DME
+  allArrivalApproach: 020304
+  allArrTaxiwayID: 000102
+  allParkingStandID: 01000000030000000400000005000000060000000700000008000000090000000a0000000d0000000f000000110000001200000013000000140000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f0000002000000021000000
+  eatDestination: 2
+  arrPhase_PreArrival:
+  - dummyPhaseName: 'NIKLI -To- LATIM :: 03_nikli_To_latim'
+    apPhaseData: {fileID: 11400000, guid: a55413959a04f544bac15ae19004920c, type: 2}
+    overridePhase:
+      pathData: {fileID: 11400000, guid: 91e7dbb7ac508e443a6654f7c91fd273, type: 2}
+      lifetime: 3
+      calculatedLifetime: 4.83871
+      thisPhaseName: NIKLI
+      nextPhaseName: LATIM
+      startPointSpeed: 320
+      endPointSpeed: 300
+      endPointFL: 7000
+  - dummyPhaseName: 'LATIM -To- 20Dme :: 04_latim_To_20dme050'
+    apPhaseData: {fileID: 11400000, guid: a55413959a04f544bac15ae19004920c, type: 2}
+    overridePhase:
+      pathData: {fileID: 11400000, guid: 6a0aa2233140a5d429f0e5ad8ff82093, type: 2}
+      lifetime: 1
+      calculatedLifetime: 1.0344828
+      thisPhaseName: LATIM
+      nextPhaseName: 20Dme
+      startPointSpeed: 300
+      endPointSpeed: 280
+      endPointFL: 4000
+  - dummyPhaseName: '20DME -To- 14DME :: 05_20dme050_to14dme050'
+    apPhaseData: {fileID: 11400000, guid: 1aa0086550099db41b1f0b131a93e843, type: 2}
+    overridePhase:
+      pathData: {fileID: 11400000, guid: cf273b2b03793294bb22e1c1e33a6863, type: 2}
+      lifetime: 0
+      calculatedLifetime: 1.2857143
+      thisPhaseName: 
+      nextPhaseName: 
+      startPointSpeed: 0
+      endPointSpeed: 0
+      endPointFL: 0
+  arrPhase_VOR: []
+  arrPhase_Arc:
+  - dummyPhaseName: '14 DME -To- 12ARC :: 06_A_14dme050_To_12dmeArc050'
+    apPhaseData: {fileID: 11400000, guid: c9cbc0f7faa55a44e9fd05a1250766d6, type: 2}
+    overridePhase:
+      pathData: {fileID: 11400000, guid: add7ac303d2db48459f43ffd803788a6, type: 2}
+      lifetime: 0
+      calculatedLifetime: 0.6575415
+      thisPhaseName: 
+      nextPhaseName: 
+      startPointSpeed: 0
+      endPointSpeed: 0
+      endPointFL: 0
+  - dummyPhaseName: '12ARC -To- R355 :: 01_12dme050_To_R355'
+    apPhaseData: {fileID: 11400000, guid: 39958a9be1b152847bffca9ed7bbaeec, type: 2}
+    overridePhase:
+      pathData: {fileID: 11400000, guid: 88ef227ae598dd1418dab6c8acc07e54, type: 2}
+      lifetime: 0
+      calculatedLifetime: 2.1144817
+      thisPhaseName: 
+      nextPhaseName: 
+      startPointSpeed: 0
+      endPointSpeed: 0
+      endPointFL: 0
+  - dummyPhaseName: 'R355 -To- LCLZR :: 02_R355_To_Loclzr'
+    apPhaseData: {fileID: 11400000, guid: 108510274b29505488370a883ee573a3, type: 2}
+    overridePhase:
+      pathData: {fileID: 11400000, guid: f29df1d808031c543a8d6a68116540f2, type: 2}
+      lifetime: 0
+      calculatedLifetime: 1.6829594
+      thisPhaseName: 
+      nextPhaseName: 
+      startPointSpeed: 0
+      endPointSpeed: 0
+      endPointFL: 0
+  - dummyPhaseName: 'LCLZR -To- 6DME :: 03_Loclzr12dme_To_6DME'
+    apPhaseData: {fileID: 11400000, guid: 56d34d288faa96349bf23a987ccb14a0, type: 2}
+    overridePhase:
+      pathData: {fileID: 0}
+      lifetime: 0
+      calculatedLifetime: 0
+      thisPhaseName: 
+      nextPhaseName: 
+      startPointSpeed: 0
+      endPointSpeed: 0
+      endPointFL: 0
+  - dummyPhaseName: '6DME -To- LAND :: 01_A_6DME_To_Land'
+    apPhaseData: {fileID: 11400000, guid: d209059121352ef41a65df0c94501250, type: 2}
+    overridePhase:
+      pathData: {fileID: 0}
+      lifetime: 0
+      calculatedLifetime: 0
+      thisPhaseName: 
+      nextPhaseName: 
+      startPointSpeed: 0
+      endPointSpeed: 0
+      endPointFL: 0
+  - dummyPhaseName: 'Land -To- L.End :: 02_A_01_Land_To_S1'
+    apPhaseData: {fileID: 11400000, guid: a42fb62e15e8e114f921a92e648012d4, type: 2}
+    overridePhase:
+      pathData: {fileID: 0}
+      lifetime: 0
+      calculatedLifetime: 0
+      thisPhaseName: 
+      nextPhaseName: 
+      startPointSpeed: 0
+      endPointSpeed: 0
+      endPointFL: 0
+  - dummyPhaseName: 'L.End -To- RwyCLR :: Tx_S1_To_Rwy_Vacate'
+    apPhaseData: {fileID: 11400000, guid: 0c3e40cf2d0ea3a41a8dfcd808c36389, type: 2}
+    overridePhase:
+      pathData: {fileID: 0}
+      lifetime: 0
+      calculatedLifetime: 0
+      thisPhaseName: 
+      nextPhaseName: 
+      startPointSpeed: 0
+      endPointSpeed: 0
+      endPointFL: 0
+  - dummyPhaseName: 'RwyCLR -To- Parking :: Tx_S1_To_S'
+    apPhaseData: {fileID: 11400000, guid: 56365aaf8fad8954f8e60d90e66f0e8c, type: 2}
+    overridePhase:
+      pathData: {fileID: 0}
+      lifetime: 0
+      calculatedLifetime: 0
+      thisPhaseName: 
+      nextPhaseName: 
+      startPointSpeed: 0
+      endPointSpeed: 0
+      endPointFL: 0
+  arrPhase_Delta:
+  - dummyPhaseName: '14DME -To- DELTA :: 06_B_14dme050_To_Delta'
+    apPhaseData: {fileID: 11400000, guid: 8dc973dc78629ec489676eba8c075ea1, type: 2}
+    overridePhase:
+      pathData: {fileID: 0}
+      lifetime: 0
+      calculatedLifetime: 0
+      thisPhaseName: 
+      nextPhaseName: 
+      startPointSpeed: 0
+      endPointSpeed: 0
+      endPointFL: 0
+  - dummyPhaseName: '6DME -To- LAND :: 01_A_6DME_To_Land'
+    apPhaseData: {fileID: 11400000, guid: d209059121352ef41a65df0c94501250, type: 2}
+    overridePhase:
+      pathData: {fileID: 0}
+      lifetime: 0
+      calculatedLifetime: 0
+      thisPhaseName: 
+      nextPhaseName: 
+      startPointSpeed: 0
+      endPointSpeed: 0
+      endPointFL: 0
+  - dummyPhaseName: 'Land -To- L.End :: 02_A_01_Land_To_S1'
+    apPhaseData: {fileID: 11400000, guid: a42fb62e15e8e114f921a92e648012d4, type: 2}
+    overridePhase:
+      pathData: {fileID: 0}
+      lifetime: 0
+      calculatedLifetime: 0
+      thisPhaseName: 
+      nextPhaseName: 
+      startPointSpeed: 0
+      endPointSpeed: 0
+      endPointFL: 0
+  - dummyPhaseName: 'L.End -To- RwyCLR :: Tx_S1_To_Rwy_Vacate'
+    apPhaseData: {fileID: 11400000, guid: 0c3e40cf2d0ea3a41a8dfcd808c36389, type: 2}
+    overridePhase:
+      pathData: {fileID: 0}
+      lifetime: 0
+      calculatedLifetime: 0
+      thisPhaseName: 
+      nextPhaseName: 
+      startPointSpeed: 0
+      endPointSpeed: 0
+      endPointFL: 0
+  - dummyPhaseName: 'RwyCLR -To- Parking :: Tx_S1_To_S'
+    apPhaseData: {fileID: 11400000, guid: 56365aaf8fad8954f8e60d90e66f0e8c, type: 2}
+    overridePhase:
+      pathData: {fileID: 0}
+      lifetime: 0
+      calculatedLifetime: 0
+      thisPhaseName: 
+      nextPhaseName: 
+      startPointSpeed: 0
+      endPointSpeed: 0
+      endPointFL: 0
+  arrPhase_Circuit: []
+  arrPhase_EAT:
+  - dummyPhaseName: '14DME -To- EAT :: 06_C_14dme050_To_EAT(TRD)'
+    apPhaseData: {fileID: 11400000, guid: 83d41635d976a60469e669e3a90c000a, type: 2}
+    overridePhase:
+      pathData: {fileID: 11400000, guid: c736f018736d7514097b2943dbe4beeb, type: 2}
+      lifetime: 0
+      calculatedLifetime: 5.5411
+      thisPhaseName: 
+      nextPhaseName: 
+      startPointSpeed: 0
+      endPointSpeed: 0
+      endPointFL: 0
+  - dummyPhaseName: '6DME -To- LAND :: 01_A_6DME_To_Land'
+    apPhaseData: {fileID: 11400000, guid: d209059121352ef41a65df0c94501250, type: 2}
+    overridePhase:
+      pathData: {fileID: 0}
+      lifetime: 0
+      calculatedLifetime: 0
+      thisPhaseName: 
+      nextPhaseName: 
+      startPointSpeed: 0
+      endPointSpeed: 0
+      endPointFL: 0
+  - dummyPhaseName: 'Land -To- L.End :: 02_A_01_Land_To_S1'
+    apPhaseData: {fileID: 11400000, guid: a42fb62e15e8e114f921a92e648012d4, type: 2}
+    overridePhase:
+      pathData: {fileID: 0}
+      lifetime: 0
+      calculatedLifetime: 0
+      thisPhaseName: 
+      nextPhaseName: 
+      startPointSpeed: 0
+      endPointSpeed: 0
+      endPointFL: 0
+  - dummyPhaseName: 'L.End -To- RwyCLR :: Tx_S1_To_Rwy_Vacate'
+    apPhaseData: {fileID: 11400000, guid: 0c3e40cf2d0ea3a41a8dfcd808c36389, type: 2}
+    overridePhase:
+      pathData: {fileID: 0}
+      lifetime: 0
+      calculatedLifetime: 0
+      thisPhaseName: 
+      nextPhaseName: 
+      startPointSpeed: 0
+      endPointSpeed: 0
+      endPointFL: 0
+  - dummyPhaseName: 'RwyCLR -To- Parking :: Tx_S1_To_S'
+    apPhaseData: {fileID: 11400000, guid: 56365aaf8fad8954f8e60d90e66f0e8c, type: 2}
+    overridePhase:
+      pathData: {fileID: 0}
+      lifetime: 0
+      calculatedLifetime: 0
+      thisPhaseName: 
+      nextPhaseName: 
+      startPointSpeed: 0
+      endPointSpeed: 0
+      endPointFL: 0
+  allDepPhase:
+  - dummyPhaseName: 'Parking -To- Taxi :: Pkg_05_Facing_North'
+    apPhaseData: {fileID: 11400000, guid: 7373444a995313b43966d93c028c4e62, type: 2}
+    overridePhase:
+      pathData: {fileID: 0}
+      lifetime: 0
+      calculatedLifetime: 0
+      thisPhaseName: 
+      nextPhaseName: 
+      startPointSpeed: 0
+      endPointSpeed: 0
+      endPointFL: 0
+  - dummyPhaseName: 'Taxi -To- ATC CLR :: Tx_A1_PkgStand_To_ATC_Clear_Point'
+    apPhaseData: {fileID: 11400000, guid: 009f2cd3bc863d94c9bfbfd8f849b759, type: 2}
+    overridePhase:
+      pathData: {fileID: 0}
+      lifetime: 0
+      calculatedLifetime: 0
+      thisPhaseName: 
+      nextPhaseName: 
+      startPointSpeed: 0
+      endPointSpeed: 0
+      endPointFL: 0
+  - dummyPhaseName: 'ATC CLR -To- Line Up :: Tx_A2_ATC_Clear_To_Holding_Point'
+    apPhaseData: {fileID: 11400000, guid: 42ae9d312e21e834688c234728eeda97, type: 2}
+    overridePhase:
+      pathData: {fileID: 0}
+      lifetime: 0
+      calculatedLifetime: 0
+      thisPhaseName: 
+      nextPhaseName: 
+      startPointSpeed: 0
+      endPointSpeed: 0
+      endPointFL: 0
+  - dummyPhaseName: 'Line Up -To- Departure :: Tx_A3_LineUp'
+    apPhaseData: {fileID: 11400000, guid: 21af7329da18d634ca426d863f60e707, type: 2}
+    overridePhase:
+      pathData: {fileID: 0}
+      lifetime: 0
+      calculatedLifetime: 0
+      thisPhaseName: 
+      nextPhaseName: 
+      startPointSpeed: 0
+      endPointSpeed: 0
+      endPointFL: 0
+  - dummyPhaseName: 'Departure -To- T.O.Boost :: Tx_A4_Departure'
+    apPhaseData: {fileID: 11400000, guid: aed9453f904bb634ba93e72dd23fdd89, type: 2}
+    overridePhase:
+      pathData: {fileID: 0}
+      lifetime: 0
+      calculatedLifetime: 0
+      thisPhaseName: 
+      nextPhaseName: 
+      startPointSpeed: 0
+      endPointSpeed: 0
+      endPointFL: 0
+  - dummyPhaseName: 'T.O.Boost -To- T.O.Fly :: Tx_A5_T.O.Boost'
+    apPhaseData: {fileID: 11400000, guid: 38589dd2da34a3c4588c20b1d024f4d7, type: 2}
+    overridePhase:
+      pathData: {fileID: 0}
+      lifetime: 0
+      calculatedLifetime: 0
+      thisPhaseName: 
+      nextPhaseName: 
+      startPointSpeed: 0
+      endPointSpeed: 0
+      endPointFL: 0
+  - dummyPhaseName: 'T.O.Fly -To- Airborne :: Tx_A6_T.O_Fly_High'
+    apPhaseData: {fileID: 11400000, guid: d4ec0a5c2919e55448d9d7f78c43a9a5, type: 2}
+    overridePhase:
+      pathData: {fileID: 0}
+      lifetime: 0
+      calculatedLifetime: 0
+      thisPhaseName: 
+      nextPhaseName: 
+      startPointSpeed: 0
+      endPointSpeed: 0
+      endPointFL: 0
+  - dummyPhaseName: 'Airborne -To- Transfer :: Tx_A7_A_Airborne_To_4DME'
+    apPhaseData: {fileID: 11400000, guid: f15777451dbd33e4dab2d0b4495dc252, type: 2}
+    overridePhase:
+      pathData: {fileID: 0}
+      lifetime: 0
+      calculatedLifetime: 0
+      thisPhaseName: 
+      nextPhaseName: 
+      startPointSpeed: 0
+      endPointSpeed: 0
+      endPointFL: 0
+  - dummyPhaseName: 'Transfer -To- DepEND :: Tr_4dme_To_Transfer050'
+    apPhaseData: {fileID: 11400000, guid: 21e0e4efd0c40b74e8b0790cd62754fc, type: 2}
+    overridePhase:
+      pathData: {fileID: 11400000, guid: 75534bfc2c222dd4f9f0ce7871a6bca4, type: 2}
+      lifetime: 0
+      calculatedLifetime: 4.4567585
+      thisPhaseName: 
+      nextPhaseName: 
+      startPointSpeed: 0
+      endPointSpeed: 0
+      endPointFL: 0
+  batchAction: {fileID: 7577381143115201280, guid: efd6ed3d35161354ba6aa52d2183018d, type: 3}

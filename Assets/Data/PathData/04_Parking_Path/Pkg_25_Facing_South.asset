@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9745e89412c4564a9554f60a2861bad, type: 3}
+  m_Name: Pkg_25_Facing_South
+  m_EditorClassIdentifier: 
+  pathSequences:
+    allPath:
+    - pathType: 1
+      p0: {x: -86.27, y: 0, z: 239.78003}
+      p1: {x: -85.67666, y: 0, z: 238.96336}
+      p2: {x: -85.82752, y: 0, z: 236.68907}
+      p3: {x: -87.12, y: 0, z: 235.75003}
+      dist: 4.44451
+      distFraction: 0.22499669
+      fwd_p0: {x: 0.58778244, y: 0, z: -0.809019}
+      fwd_p3: {x: -0.80901724, y: 0, z: -0.5877849}
+      fwd_linear: {x: -0.20637904, y: 0, z: -0.9784722}
+      totalAngle: 1.799717
+      drawResolution: 11
+    - pathType: 1
+      p0: {x: -87.12, y: 0, z: 235.75003}
+      p1: {x: -88.17861, y: 0, z: 234.9809}
+      p2: {x: -90.22447, y: 0, z: 233.50015}
+      p3: {x: -91.78, y: 0, z: 232.37}
+      dist: 5.7567525
+      distFraction: 0.17370905
+      fwd_p0: {x: -0.8090133, y: 0, z: -0.58779025}
+      fwd_p3: {x: -0.8090167, y: 0, z: -0.58778566}
+      fwd_linear: {x: -0.8094834, y: 0, z: -0.5871427}
+      totalAngle: 0
+      drawResolution: 2
+    allDistFraction:
+    - 0.43568236
+    - 0.56431764
+    totalDistance: 10.201262

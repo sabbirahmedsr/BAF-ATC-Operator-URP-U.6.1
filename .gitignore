@@ -6,8 +6,10 @@
 
 
 
-# Ignore Big file by default
+# Ignore this file formate by default
 *.psd
+*.blend1
+*.blend1.meta
 
 
 
@@ -22,10 +24,30 @@
 # Un-ignore project folders
 !/Assets
 
+# Un-ignore Data Folder
+!/Assets/Data
+!/Assets/Data.meta
+!/Assets/Data/**
+
+# Un-ignore Image & Material Folder
+!/Assets/Image & Material
+!/Assets/Image & Material.meta
+!/Assets/Image & Material/**
+
 # Un-ignore Info Folder
 !/Assets/Info
 !/Assets/Info.meta
 !/Assets/Info/**
+
+# Un-ignore Model Folder
+!/Assets/Model
+!/Assets/Model.meta
+!/Assets/Model/**
+
+# Un-ignore Prefab Folder
+!/Assets/Prefab
+!/Assets/Prefab.meta
+!/Assets/Prefab/**
 
 # Un-ignore Scene Folder
 !/Assets/Scenes
