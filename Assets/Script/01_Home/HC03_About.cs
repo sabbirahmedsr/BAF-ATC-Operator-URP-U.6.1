@@ -13,7 +13,7 @@ namespace ATC.Home {
         }
 
         private void OnClick_OK() {
-            mainController.Toggle_UIPanel(UIPanelType.about);
+            mainController.Toggle_UIPanel(UIPanelType.mainMenu);
         }
     }
 }

@@ -34,5 +34,13 @@ public static class GlobalEvent {
     }
 
 
+
+
+    internal static void ClearAllListeners() {
+        onAirplaneCreatedEvent = delegate { };
+        onSurfaceMapNodeCreatedEvent = delegate { };
+        onRadarMapNodeCreatedEvent = delegate { };
+        onScoreCountChangedEvent = delegate { };
+    }
 }
 

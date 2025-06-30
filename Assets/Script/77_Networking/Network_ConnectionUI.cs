@@ -41,7 +41,6 @@ namespace ATC.Operator.Networking {
         }
 
 
-
         private void OnClick_Ok() {
             canvasRoot.gameObject.SetActive(false);
         }
@@ -56,7 +55,7 @@ namespace ATC.Operator.Networking {
 
         internal void OnConnectionChange(ConnectionStatus rConnectionStatus, string rHeadingString, string rReason) {
             // enable disable connection ui
-            tConnectingRoot.gameObject.SetActive(rConnectionStatus==ConnectionStatus.attemptConnection);
+            tConnectingRoot.gameObject.SetActive(rConnectionStatus == ConnectionStatus.attemptConnection);
             tConnectionSuccessRoot.gameObject.SetActive(rConnectionStatus == ConnectionStatus.connected);
             bool isFailure = rConnectionStatus == ConnectionStatus.disconnected || rConnectionStatus == ConnectionStatus.connectionFailed;
             tConnectionFailureRoot.gameObject.SetActive(isFailure);

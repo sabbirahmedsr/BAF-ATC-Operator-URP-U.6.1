@@ -33,7 +33,7 @@ namespace ATC.Operator.Networking {
         [SerializeField] private Network_ActionReceiver actionReceiver;
         [SerializeField] private Network_ActionSender actionSender;
 
-        internal void Start() {
+        internal void Initialize() {
             // Initialize Riptide Logger
             RiptideLogger.Initialize(Debug.Log, Debug.Log, Debug.LogWarning, Debug.LogError, false);
 
@@ -45,10 +45,13 @@ namespace ATC.Operator.Networking {
             client.Disconnected += OnSelfDisconnected;
             client.ConnectionFailed += OnSelfConnectionFailed;
 
+            // initialize child script
             connectionUI.Initialize(this);
             actionReceiver.Initialize(this);
             actionSender.Initialize(this);
 
+            // set global variable
+            GlobalNetwork.networkManager = this;
             GlobalNetwork.actionReciever = actionReceiver;
             GlobalNetwork.actionSender = actionSender;
 
@@ -74,16 +77,17 @@ namespace ATC.Operator.Networking {
         internal void Update() {
             counter += Time.deltaTime;
             if (counter >= frameWaitingTime) {
-                //if (client.is ) { Debug.Log("No Connection;"); return; }
-
                 client.Update();
                 heartbeat.ManualUpdate();
                 counter = 0f;
             }
         }
 
-        public void OnApplicationQuit() {
+        public void OnDisable() {
             client.Disconnect();
+        }
+        public void Disconnect() {
+            client.Disconnect();            
         }
 
 

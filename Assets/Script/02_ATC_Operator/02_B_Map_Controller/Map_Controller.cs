@@ -14,7 +14,7 @@ namespace ATC.Operator.MapView {
         [SerializeField] internal Map_Node_Controller mapNodeController;
         internal Camera activeMapCamera;
 
-        internal void Start() {
+        internal void Initialize() {
 
             // Initialize Child Script
             mapModelController.Initialize(this);

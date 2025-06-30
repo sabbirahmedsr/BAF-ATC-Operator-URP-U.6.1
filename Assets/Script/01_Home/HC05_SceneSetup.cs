@@ -1,3 +1,4 @@
+using ATC.Global;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -8,6 +9,7 @@ namespace ATC.Home {
         [SerializeField] private TMP_Dropdown drdAirport;
         [SerializeField] private Button btnBack;
         [SerializeField] private Button btnStart;
+        [SerializeField] private SceneLoader sceneLoader;
 
         internal override void Initialize(HomeController _mc) {
             base.Initialize(_mc);
@@ -25,7 +27,8 @@ namespace ATC.Home {
 
         }
         private void OnClick_Start() {
-            mainController.Toggle_UIPanel(UIPanelType.mainMenu);
+            sceneLoader.LoadSceneAsync(GlobalSceneName.atcOperator_vghs);    
+            Activate(false);
         }
         private void OnClick_Back() {
             mainController.Toggle_UIPanel(UIPanelType.mainMenu);
