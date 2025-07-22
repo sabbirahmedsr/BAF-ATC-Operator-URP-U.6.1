@@ -1656,7 +1656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2cf9e9c20dfbc04988e16b61d2883de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oepratorType: 1
+  oepratorType: 0
   radarMapController: {fileID: 1040696760}
   surfaceMapController: {fileID: 1722025768}
   stripController: {fileID: 2602970666537441238}
@@ -2020,7 +2020,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7469836523729761673, guid: 81ab7292088335f4094a5a863ac6e584, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4311,7 +4311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3745710276755090207, guid: 027a9e078fdb57041bc264a873882a67, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -10.000008
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 4069413810355086377, guid: 027a9e078fdb57041bc264a873882a67, type: 3}
       propertyPath: m_AnchorMax.x
