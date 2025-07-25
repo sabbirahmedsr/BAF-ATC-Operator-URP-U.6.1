@@ -2,21 +2,15 @@ using ATC.Global;
 using System;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using static TMPro.TMP_Dropdown;
 
-namespace CommandControllerScript.Child {
+namespace ATC.Operator.FlightCreation.Child{
     /// <summery>
     /// Arrival Command Controller Create Arrival Aircraft/Flight
     /// </summery>
-    [System.Serializable]   
-    public struct CC_ArrFlightCreation {
-        [SerializeField] private Button btnCreateArrAircraft;
-
-        [Header("Create Popup UI")]
-        [SerializeField] private Transform tFlightCreateionRoot;
+    public class FC_ArrFlightCreation : MonoBehaviour {
         [SerializeField] private TMP_Dropdown drdAircraftCategory;
         [SerializeField] private TMP_Dropdown drdAircraftCallSign;
         [SerializeField] private TMP_Dropdown drdReportingPoint;
@@ -26,13 +20,12 @@ namespace CommandControllerScript.Child {
         private List<AirplaneData> result_apData;
         private List<OptionData> tmpDrdOptionData;
 
-        private CommandController cmdController;
-        internal void Initialize(CommandController rCommandController) {
-            cmdController = rCommandController;
+        private FlightCreation_Controller fcController;
+        internal void Initialize(FlightCreation_Controller rFcController) {
+            fcController = rFcController;
             result_apData = new List<AirplaneData>();
             result_category = new List<TypeOfAircraft>();
             tmpDrdOptionData = new List<OptionData>();
-            btnCreateArrAircraft.onClick.AddListener(Activate);
             btnCreateConfirm.onClick.AddListener(CreateConfirm);
             btnCreateCancel.onClick.AddListener(CreateCancel);
             drdAircraftCategory.onValueChanged.AddListener(OnCategoryChange);
@@ -42,10 +35,7 @@ namespace CommandControllerScript.Child {
             OnCategoryChange(0);
         }
         internal void Activate() {
-            tFlightCreateionRoot.gameObject.SetActive(true);
-        }
-        internal void MakeDisable(bool rBool) {
-            btnCreateArrAircraft.gameObject.SetActive(!rBool);
+            gameObject.SetActive(true);
         }
 
 
@@ -84,10 +74,10 @@ namespace CommandControllerScript.Child {
             result_apData.Clear();
             tmpDrdOptionData = new List<OptionData>();
             TypeOfAircraft selectedCategory = result_category[drdAircraftCategory.value];
-            for (int i = 0; i < cmdController.allAirplaneData.Length; i++) {
-                if (cmdController.allAirplaneData[i].aircraftType == selectedCategory) {
-                    result_apData.Add(cmdController.allAirplaneData[i]);
-                    tmpDrdOptionData.Add(new OptionData(cmdController.allAirplaneData[i].callSign.Caption()));
+            for (int i = 0; i < GlobalData.allAirplaneData.Length; i++) {
+                if (GlobalData.allAirplaneData[i].aircraftType == selectedCategory) {
+                    result_apData.Add(GlobalData.allAirplaneData[i]);
+                    tmpDrdOptionData.Add(new OptionData(GlobalData.allAirplaneData[i].callSign.Caption()));
                 }
             }
             drdAircraftCallSign.ClearOptions();
@@ -115,10 +105,10 @@ namespace CommandControllerScript.Child {
         private void CreateConfirm() {
             CallSign selectedCallSign = result_apData[drdAircraftCallSign.value].callSign;
             GlobalNetwork.actionSender.Create_ArrFlight_OnServer(selectedCallSign, (ushort)drdReportingPoint.value);
-            tFlightCreateionRoot.gameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
         private void CreateCancel() {
-            tFlightCreateionRoot.gameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
     }
 }

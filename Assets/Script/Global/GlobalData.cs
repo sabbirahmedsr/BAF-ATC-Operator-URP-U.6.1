@@ -7,10 +7,18 @@ public static class GlobalData {
     internal static OperatorType operatorType = OperatorType.departure;
 
     internal static Dictionary<ushort, AirplaneController> allActiveAirplane = new Dictionary<ushort, AirplaneController>();
+    internal static AirplaneData[] allAirplaneData;
 
     // scoring
     internal static ScoreCount arrScoreCount = new ScoreCount();
     internal static ScoreCount depScoreCount = new ScoreCount();
+
+    internal static void CrealAllListener() {
+        allActiveAirplane.Clear();
+        allAirplaneData = new AirplaneData[] { };
+        arrScoreCount = new ScoreCount();
+        depScoreCount = new ScoreCount();
+    }
 }
 
 [System.Serializable]

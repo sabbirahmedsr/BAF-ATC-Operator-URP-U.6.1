@@ -1757,7 +1757,7 @@ MonoBehaviour:
     drdMapType: {fileID: 509061570199219119}
     drdMapTheme: {fileID: 4038352788206284108}
   mapNodeController:
-    mapNodePrefab: {fileID: 2661427384140432542, guid: 4d987b034b695454a8c6b0190bb7b178, type: 3}
+    mapNodePrefab: {fileID: 2661427384140432542, guid: 81bfd9c1bbdc67b42a79e8a789604456, type: 3}
     mapNodeContainer: {fileID: 3716230996703696128}
 --- !u!1 &4917238008396413009
 GameObject:

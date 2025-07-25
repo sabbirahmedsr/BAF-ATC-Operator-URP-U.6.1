@@ -10,12 +10,9 @@ namespace CommandControllerScript {
         [SerializeField] internal ArrivalCommandData arrCommandData;
         [SerializeField] internal DepartureCommandData depCommandData;
         [SerializeField] internal ParkingPathData parkingPathData;
-        [SerializeField] internal AirplaneData[] allAirplaneData;
 
         [Header("Child Script")]
-        [SerializeField] internal CC_ArrFlightCreation arrFlightCreation;
         [SerializeField] internal CC_ArrFlightCommand arrFlightCommand;
-        [SerializeField] internal CC_DepFlightCreation depFlightCreation;
         [SerializeField] internal CC_DepFlightCommand depFlightCommand;
         [SerializeField] internal CC_ExtraCommandButton extraCmdButton;
 
@@ -30,22 +27,14 @@ namespace CommandControllerScript {
         internal void Initialize() {
             // initialize child script
             extraCmdButton.Initialize(this);
-            arrFlightCreation.Initialize(this);
             arrFlightCommand.Initialize(this);
-            depFlightCreation.Initialize(this);
-            depFlightCommand.Initialize(this);
-            
-            // enable / disable required flight creation
-            arrFlightCreation.MakeDisable(GlobalData.operatorType != OperatorType.arrival);
-            depFlightCreation.MakeDisable(GlobalData.operatorType != OperatorType.departure);
-            
+            depFlightCommand.Initialize(this);            
+          
             // add global listener
             GlobalEvent.onAirplaneCreatedEvent += OnAirplaneCreated;
-            GlobalNetwork.onConnectionEvent += OnConnectionChange;
         }
         private void OnDisable() {
             GlobalEvent.onAirplaneCreatedEvent -= OnAirplaneCreated;
-            GlobalNetwork.onConnectionEvent -= OnConnectionChange;
         }
 
 
@@ -63,14 +52,6 @@ namespace CommandControllerScript {
                 CC_DepCmdNode depCmdNode = newDepCmdNodeObject.GetComponent<CC_DepCmdNode>();
                 depCmdNode.Initialize(this, rAPController);
                 allDepCmdNode.Add(depCmdNode);
-            }
-        }
-
-
-        private void OnConnectionChange(ConnectionStatus rStatus, string rMsg, string rReason) {
-            if (rStatus != ConnectionStatus.connected) {
-                arrFlightCreation.MakeDisable(true);
-                depFlightCreation.MakeDisable(true);
             }
         }
 

@@ -10,7 +10,6 @@ namespace ATC.Operator.MapView {
         [SerializeField] private TMP_Text txtHeading;
         [SerializeField] private TMP_Text txtSpeed;
         [SerializeField] private TMP_Text txtHeight;
-        [SerializeField] private TMP_Text txtNameAndTimeZ;
 
         [Header("Icon Variable")]
         [SerializeField] private RectTransform icnUpArrow;
@@ -49,7 +48,6 @@ namespace ATC.Operator.MapView {
 
             // set initial variable
             txtCallSign.text = rMapNode.apController.callSign.ToString();
-            Update_AirplanePhaseNT(rMapNode.apController.lastNameAndTimeZ, rMapNode.apController.nextNameAndTimeZ);
             draggableOffset = Random.insideUnitCircle.normalized * Mathf.Lerp(50, 200, Random.value);
         }
         private void CalculateClampBoundary() {
@@ -132,8 +130,8 @@ namespace ATC.Operator.MapView {
         internal void SetVizHeadSpeedHeight(VizHeadSpeedFL rVizHeadSpeedFL) {
             // set text
             txtHeading.text = $"{rVizHeadSpeedFL.heading}°";
-            txtSpeed.text = $"{rVizHeadSpeedFL.speed}kts";
-            txtHeight.text = $"{rVizHeadSpeedFL.FL}f";
+            txtSpeed.text = $"{rVizHeadSpeedFL.speed} kts";
+            txtHeight.text = $"{rVizHeadSpeedFL.FL} feet";
             if (rVizHeadSpeedFL.flDirection == FLDirection.flat) {
                 txtHeight.color = Color.white;
             } else if (rVizHeadSpeedFL.flDirection == FLDirection.upward) {
@@ -146,12 +144,6 @@ namespace ATC.Operator.MapView {
             icnUpArrow.gameObject.SetActive(rVizHeadSpeedFL.flDirection == FLDirection.upward);
             icnDownArrow.gameObject.SetActive(rVizHeadSpeedFL.flDirection == FLDirection.downward);
             icnFlatArrow.gameObject.SetActive(rVizHeadSpeedFL.flDirection == FLDirection.flat);
-        }
-
-
-        internal void Update_AirplanePhaseNT(NameAndTimeZ rLastNT, NameAndTimeZ rNextNT) {
-            txtNameAndTimeZ.text = $"Last: {rLastNT.name}, {rLastNT.timeZ}\n";
-            txtNameAndTimeZ.text += $"Next: {rNextNT.name}, {rNextNT.timeZ}";
         }
 
     }

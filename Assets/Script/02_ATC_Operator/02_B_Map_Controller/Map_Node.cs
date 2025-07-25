@@ -23,7 +23,6 @@ namespace ATC.Operator.MapView {
             // register callback
             apController.apEvent.onUpdate_MapNodePosRot.AddListener(OnUpdate_MapNodePosRot);
             apController.apEvent.onUpdate_VizHeadingSpeedFL.AddListener(OnUpdate_VizHeadingSpeedFL);
-            apController.apEvent.onUpdate_AirplanePhaseNT.AddListener(OnUpdate_AirplaneStateNT);
         }
 
 
@@ -34,9 +33,6 @@ namespace ATC.Operator.MapView {
         }
         internal void OnUpdate_VizHeadingSpeedFL(VizHeadSpeedFL rVizHeadSpeedFL) {
             draggableInfo.SetVizHeadSpeedHeight(rVizHeadSpeedFL);
-        }
-        internal void OnUpdate_AirplaneStateNT(NameAndTimeZ rLastNT, NameAndTimeZ rNextNT) {
-            draggableInfo.Update_AirplanePhaseNT(rLastNT, rNextNT);
         }
         internal void OnChange_ActiveMapCamera(Camera rActiveMapCamera) {
             airplaneIcon.OnChange_ActiveMapCamera(rActiveMapCamera);
